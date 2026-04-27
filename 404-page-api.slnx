@@ -1,3 +1,4 @@
 <Solution>
   <Project Path="404-page-api/404-page-api.csproj" />
+  <Project Path="MonitoringServiceApi.Tests/MonitoringServiceApi.Tests.csproj" Id="c34e4e51-2614-4791-b487-4892ebd7c623" />
 </Solution>

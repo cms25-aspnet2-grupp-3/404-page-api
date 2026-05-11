@@ -6,13 +6,13 @@ using MonitoringServiceApi.Models;
 namespace MonitoringServiceApi.Controllers
 {
     [ApiController]
-    [Route("api/[controller]")]
-    public class NotFoundController : ControllerBase
+    [Route("api/monitoring")]
+    public class MonitoringController : ControllerBase
     {
         private readonly ApiDbContext _context;
         private readonly IConfiguration _config;
 
-        public NotFoundController(ApiDbContext context, IConfiguration config)
+        public MonitoringController(ApiDbContext context, IConfiguration config)
         {
             _context = context;
             _config = config;
@@ -38,7 +38,7 @@ namespace MonitoringServiceApi.Controllers
                 _context.ErrorLogs.Add(log);
                 await _context.SaveChangesAsync();
 
-                return Ok(new { message = "Log saved!" });
+                return Ok(new { success = true });
             }
             catch (Exception ex)
             {
@@ -46,7 +46,7 @@ namespace MonitoringServiceApi.Controllers
             }
         }
 
-        [HttpGet]
+        [HttpGet("logs")]
         public async Task<IActionResult> GetLogs()
         {
             var logs = await _context.ErrorLogs

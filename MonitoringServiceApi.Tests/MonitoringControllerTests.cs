@@ -10,7 +10,7 @@ using Xunit;
 
 namespace MonitoringServiceApi.Tests
 {
-    public class NotFoundControllerTests
+    public class MonitoringControllerTests
     {
         private ApiDbContext GetDatabaseContext()
         {
@@ -42,7 +42,7 @@ namespace MonitoringServiceApi.Tests
         {
             var context = GetDatabaseContext();
             var config = GetConfiguration();
-            var controller = new NotFoundController(context, config);
+            var controller = new MonitoringController(context, config);
             var log = new ErrorLog { InvalidUrl = "http://test.com" };
 
             var result = await controller.LogError("fel-nyckel", log);
@@ -55,7 +55,7 @@ namespace MonitoringServiceApi.Tests
         {
             var context = GetDatabaseContext();
             var config = GetConfiguration("min-super-secret-key");
-            var controller = new NotFoundController(context, config)
+            var controller = new MonitoringController(context, config)
             {
                 ControllerContext = new ControllerContext
                 {

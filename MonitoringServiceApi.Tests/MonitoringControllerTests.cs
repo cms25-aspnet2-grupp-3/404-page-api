@@ -85,3 +85,9 @@ namespace MonitoringServiceApi.Tests
         }
     }
 }
+
+
+/* 
+Admin login: lms_admin_shiko
+Password: Nackademin2026!
+*/

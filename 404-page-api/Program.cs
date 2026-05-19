@@ -41,4 +41,5 @@ app.MapGet("/", () => "Monitoring API is running!");
 
 app.Run();
 
+
 //https://shiko404page.azurewebsites.net/swagger/index.html

@@ -5,6 +5,7 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <RootNamespace>_404_page_api</RootNamespace>
+    <UserSecretsId>1aa9aa42-fe6a-4403-8fb2-39014cf94970</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>
